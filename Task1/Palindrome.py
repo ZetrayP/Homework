@@ -1,5 +1,9 @@
 def is_palindrome(s):
-    clean_s = ''.join(c for c in s.lower() if c.isalnum())
+    s = s.lower()
+    clean_s = ''
+    for char in s:
+        if char.isalpha() or char.isdigit():
+            clean_s += char
     return clean_s == clean_s[::-1]
 
 string = "A man, a plan, a canal: Panama"
